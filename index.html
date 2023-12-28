@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pallindrome</title>
+    <style>
+        body{
+            background-image: url(b.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #rr{
+            text-align: center;
+            margin-top: 300px;
+        }
+        #button:hover{
+            background: linear-gradient(to left,pink,skyblue);
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="rr">
+        <h1 style="color: purple;">Check whether the string  is a pallindrome or not!!</h1>
+    <label for="" style="color: purple; font-size: 20px;">Enter the word:</label>
+    <input type="text" id="input"><br><br>
+    <button id="button" style="height: 30px; width: 100px; color: blue;background-color: greenyellow;">submit</button>
+    <h1 id="output1" style="color: blue;"></h1>
+</div>
+    <script>
+        let button= document.querySelector("#button")
+        button.addEventListener('click',display)
+
+        function display(){
+        let input = document.querySelector("#input").value
+        let b = input.split("")
+        let c = b.reverse()
+        let output = b.join("")
+        if(input==output){
+                output1.innerHTML = output  + " it is a pallindrome"
+                output1.style.color = "green"
+        }
+                
+        else{
+                output1.innerHTML = input + " it is not a palindrome"
+                output1.style.color = 'red'
+    }
+        }
+    </script>
+</body>
+</html>
